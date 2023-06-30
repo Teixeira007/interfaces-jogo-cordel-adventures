@@ -1,10 +1,16 @@
-[gd_scene load_steps=11 format=3 uid="uid://d2l4kvh61o4cw"]
+[gd_scene load_steps=17 format=3 uid="uid://d2l4kvh61o4cw"]
 
 [ext_resource type="FontFile" uid="uid://c25w7deyweeoo" path="res://fonts/Cordel Encarnado II.otf" id="1_qnp55"]
 [ext_resource type="Script" path="res://script/tela_inicial.gd" id="1_vixsm"]
-[ext_resource type="Texture2D" uid="uid://etqg4i145elc" path="res://fundo/fundo-alternativo.jpg" id="3_bdkgv"]
+[ext_resource type="Texture2D" uid="uid://dnwhb38lnr6ci" path="res://fundo/fundo-alternativo2.jpg" id="3_kvtbt"]
 [ext_resource type="Texture2D" uid="uid://bjhbq3mcd2nu1" path="res://fundo/cacto.png" id="4_c4dq7"]
 [ext_resource type="Texture2D" uid="uid://b3d40x2ctcji2" path="res://fundo/Obrabo.png" id="4_xtuyg"]
+[ext_resource type="Texture2D" uid="uid://djpf3txb0xhga" path="res://fundo/nuvens.png" id="6_vfkwp"]
+[ext_resource type="Texture2D" uid="uid://bg4jij2oprcpn" path="res://fundo/nuvem2.png" id="7_fotal"]
+[ext_resource type="Texture2D" uid="uid://dq3l30v0d21ua" path="res://fundo/passaro1.png" id="8_5skm0"]
+[ext_resource type="Texture2D" uid="uid://bf1rwu78f24sl" path="res://fundo/passaro2.png" id="9_whwp3"]
+[ext_resource type="Texture2D" uid="uid://dfvse45k5mi1h" path="res://fundo/passaro3.png" id="10_uug40"]
+[ext_resource type="Texture2D" uid="uid://bavbuyiavt45o" path="res://fundo/chapeu.png" id="11_3rwcp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mfoga"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -50,9 +56,9 @@ text = "Cordel Adventures
 format = 2
 
 [node name="Fundo" type="Sprite2D" parent="TileMap"]
-position = Vector2(577, 325)
+position = Vector2(573, 325)
 scale = Vector2(1.06759, 1.075)
-texture = ExtResource("3_bdkgv")
+texture = ExtResource("3_kvtbt")
 
 [node name="Cacto" type="Sprite2D" parent="TileMap"]
 position = Vector2(1075, 511)
@@ -77,6 +83,7 @@ offset_right = 119.0
 offset_bottom = 139.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 10
 
 [node name="iniciar" type="Button" parent="controles"]
 layout_mode = 2
@@ -139,3 +146,56 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_eu43n")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_khco5")
 theme_override_styles/focus = SubResource("StyleBoxFlat_70wih")
 text = "Créditos"
+
+[node name="Nuvens2" type="Sprite2D" parent="."]
+position = Vector2(835, 137)
+scale = Vector2(1.35, 1.35)
+texture = ExtResource("6_vfkwp")
+
+[node name="Nuvens3" type="Sprite2D" parent="."]
+position = Vector2(778.294, 366)
+scale = Vector2(0.816869, 0.8)
+texture = ExtResource("6_vfkwp")
+
+[node name="Nuvens7" type="Sprite2D" parent="."]
+position = Vector2(72, 61)
+scale = Vector2(1.31667, 1.31667)
+texture = ExtResource("6_vfkwp")
+
+[node name="Nuvem2" type="Sprite2D" parent="."]
+position = Vector2(322, 142)
+texture = ExtResource("7_fotal")
+
+[node name="Nuvem3" type="Sprite2D" parent="."]
+position = Vector2(1056, 51)
+texture = ExtResource("7_fotal")
+
+[node name="Nuvem4" type="Sprite2D" parent="."]
+position = Vector2(232, 376)
+scale = Vector2(0.738938, 0.738938)
+texture = ExtResource("7_fotal")
+
+[node name="Passaro1" type="Sprite2D" parent="."]
+position = Vector2(1059, 314)
+texture = ExtResource("8_5skm0")
+
+[node name="Passaro2" type="Sprite2D" parent="."]
+position = Vector2(93.4894, 187.25)
+scale = Vector2(1.47872, 1.47872)
+texture = ExtResource("9_whwp3")
+
+[node name="Passaro3" type="Sprite2D" parent="."]
+position = Vector2(586, 182)
+scale = Vector2(1.75, 1.75)
+texture = ExtResource("10_uug40")
+
+[node name="Chapeu" type="Sprite2D" parent="."]
+position = Vector2(1014, 209)
+rotation = 0.286585
+scale = Vector2(0.644324, 0.644324)
+texture = ExtResource("11_3rwcp")
+
+[node name="Nuvens" type="Sprite2D" parent="."]
+position = Vector2(575, 74)
+scale = Vector2(1.36667, 1.36667)
+texture = ExtResource("6_vfkwp")
