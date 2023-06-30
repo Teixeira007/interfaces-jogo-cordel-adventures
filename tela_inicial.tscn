@@ -1,0 +1,141 @@
+[gd_scene load_steps=11 format=3 uid="uid://d2l4kvh61o4cw"]
+
+[ext_resource type="FontFile" uid="uid://c25w7deyweeoo" path="res://fonts/Cordel Encarnado II.otf" id="1_qnp55"]
+[ext_resource type="Script" path="res://script/tela_inicial.gd" id="1_vixsm"]
+[ext_resource type="Texture2D" uid="uid://etqg4i145elc" path="res://fundo/fundo-alternativo.jpg" id="3_bdkgv"]
+[ext_resource type="Texture2D" uid="uid://bjhbq3mcd2nu1" path="res://fundo/cacto.png" id="4_c4dq7"]
+[ext_resource type="Texture2D" uid="uid://b3d40x2ctcji2" path="res://fundo/Obrabo.png" id="4_xtuyg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mfoga"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5dy63"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eu43n"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_khco5"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_70wih"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="telaInicial" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_right = -62.0
+offset_bottom = -29.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vixsm")
+
+[node name="Label" type="Label" parent="."]
+top_level = true
+layout_mode = 0
+offset_left = 133.0
+offset_top = 194.0
+offset_right = 1029.0
+offset_bottom = 321.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_qnp55")
+theme_override_font_sizes/font_size = 90
+text = "Cordel Adventures
+"
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
+
+[node name="Fundo" type="Sprite2D" parent="TileMap"]
+position = Vector2(577, 325)
+scale = Vector2(1.06759, 1.075)
+texture = ExtResource("3_bdkgv")
+
+[node name="Cacto" type="Sprite2D" parent="TileMap"]
+position = Vector2(1075, 511)
+scale = Vector2(0.651596, 0.771787)
+texture = ExtResource("4_c4dq7")
+
+[node name="Obrabo" type="Sprite2D" parent="TileMap"]
+position = Vector2(893, 536)
+scale = Vector2(0.485611, 0.406355)
+texture = ExtResource("4_xtuyg")
+
+[node name="controles" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = 0.5
+offset_right = 119.0
+offset_bottom = 139.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="iniciar" type="Button" parent="controles"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../Créditos")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_colors/font_hover_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_colors/font_focus_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_fonts/font = ExtResource("1_qnp55")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxFlat_mfoga")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5dy63")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_eu43n")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_khco5")
+theme_override_styles/focus = SubResource("StyleBoxFlat_70wih")
+text = "Iniciar"
+
+[node name="Carregar" type="Button" parent="controles"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_colors/font_hover_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_colors/font_focus_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_fonts/font = ExtResource("1_qnp55")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxFlat_mfoga")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5dy63")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_eu43n")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_khco5")
+theme_override_styles/focus = SubResource("StyleBoxFlat_70wih")
+text = "Carregar"
+
+[node name="Configurações" type="Button" parent="controles"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_colors/font_hover_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_colors/font_focus_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_fonts/font = ExtResource("1_qnp55")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxFlat_mfoga")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5dy63")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_eu43n")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_khco5")
+theme_override_styles/focus = SubResource("StyleBoxFlat_70wih")
+text = "Configurações"
+
+[node name="Créditos" type="Button" parent="controles"]
+layout_mode = 2
+focus_neighbor_bottom = NodePath("../iniciar")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_colors/font_hover_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_colors/font_focus_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_fonts/font = ExtResource("1_qnp55")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxFlat_mfoga")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5dy63")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_eu43n")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_khco5")
+theme_override_styles/focus = SubResource("StyleBoxFlat_70wih")
+text = "Créditos"

@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Segundo_Projeto"
+config/name="Jogo"
 config/features=PackedStringArray("4.0", "Mobile")
 config/icon="res://icon.svg"
 
